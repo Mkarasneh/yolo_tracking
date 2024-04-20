@@ -101,6 +101,7 @@ class ReidAutoBackend():
         """
 
         suffix = [suffix] if isinstance(suffix, str) else list(suffix)
+        suffix += ['.pth']
         files = [file] if isinstance(file, (str, Path)) else list(file)
 
         for f in files:
