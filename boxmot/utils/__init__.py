@@ -36,6 +36,8 @@ class PerClassDecorator:
             # Unpack arguments for clarity
             args = list(args)
             dets = args[0]
+            if type(dets) != np.ndarray:
+                dets = dets.data
             im = args[1]
             
             if instance.per_class is True:
